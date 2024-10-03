@@ -37,7 +37,6 @@ public class LL {
   public static void main(String[] args) {
         int[] a={1,2,3,4,5};
         Node head=convertarr2LL(a);
-        head=insertBeforeValue(head,6,5);
         printLL(head);
     }
 }
