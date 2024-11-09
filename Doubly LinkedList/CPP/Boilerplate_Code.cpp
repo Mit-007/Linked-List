@@ -22,11 +22,11 @@ class Node{
 };
 Node* convertArr2DLL(vector<int>& arr){
     Node* head= new Node(arr[0]);  
-    Node* mover=head; 
+    Node* prev=head; 
     for (int i=1;i<arr.size();i++){
-        Node* temp=new Node(arr[i]); 
-        mover->next=temp; 
-        mover=mover->next;
+        Node* temp=new Node(arr[i],nullptr,prev); 
+        prev->next=temp; 
+        prev=temp;
     }
     return head;
 }
